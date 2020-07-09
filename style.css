@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+    background-image: url("back.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #5767f5;
+    
+    
+    
+}
+
+
+
+nav{
+    
+  color: black;
+  background: linear-gradient(-45deg, #ffffff, #5767f5, #4363f1, #000144 );
+  height: 80px;
+  width: 100%;
+  background-size: 200%, 200%;
+  position: relative;
+  animation: change 12s ease-in-out infinite;
+}
+label.logo{
+  
+  padding:10px;
+  margin-left: 20px;
+}
+
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 6px;
+}
+nav ul li a{
+  color: #00221b;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  text-transform: uppercase; 
+  font-family: 'Poppins', sans-serif;
+}
+a.active,a:hover{
+  background: #ffffff;
+  transition: .5s;
+}
+
+
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+  
+}
+#check{
+  display: none;
+}
+
+.container{
+  width: 100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  
+  
+}
+
+.container .card{
+  width: 330px;
+  height: 410px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  margin-top: 40px;
+  text-align: center;
+  transition: all 0.25s;
+  background:#9bcfff;
+}
+
+.container .card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+  width: 330px;
+  height: 220px;
+  object-fit: contain;
+}
+
+
+.container .card h3{
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: 1px 1px 2px rgba(245, 245, 245, 0.9);
+  
+
+}
+
+.container .card p{
+  padding: 0 1rem;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.container .card a {
+  font-weight: 400;
+  text-decoration: none;
+  color: #00899e;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+div#slider { overflow: hidden; } /* las imágenes no van a salir del márgen de la pantalla*/
+div#slider figure img { width: 20%; float: left; }
+
+div#slider figure { 
+  position: relative;
+  width: 300%;
+  margin: 0;
+  margin-top: 10px;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; /*el movimiento se va a mantener de forma indefinida -infinito-*/
+}
+
+
+/*esta parte del código define el movimiento de las imágenes a la izquierda*/
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+
+
+
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:50px;
+  width:100%;
+  align-items: center;
+  text-align: center;
+  background: #5767f5;
+  
+
+}
+
+.imgfooter{
+  margin: 0 auto;
+  
+  
+}
+
+
+@media (max-width: 1135px){
+  label.logo{
+        padding-left: 12px;
+        width: 100%;
+  }
+
+  nav label img {
+    margin-top: 10px;
+    max-width: 320px;
+    
+  }
+}
+
+
+
+@media (max-width: 1065px){
+  label.logo{
+        padding-left: 12px;
+        width: 100%;
+  }
+  nav ul li a{
+    font-size: 17px;
+  }
+
+  nav label img {
+    margin-top: 10px;
+    max-width: 290px;
+    
+  }
+}
+
+
+
+@media (max-width: 912px){
+  .checkbtn{
+    display: block;
+    margin-right: 30px;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 40vh;
+    background: #abccee;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 100;
+  }
+  nav ul li{
+    display: block;
+    margin: 20px 0;
+    line-height: 25px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #216faa;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+  label.logo{
+    width: 90%;
+    padding:10px;
+    margin-left: 10px;
+  }
+
+
+
+  nav label img {
+    margin-top: 5px;
+    max-width: 300px;
+    
+  }
+}
+
+@media (max-width: 500px){
+   
+  nav label img{
+  margin-top: 15px;
+    max-width: 235px;
+  }
+
+}
+
+
+@keyframes change {
+
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
